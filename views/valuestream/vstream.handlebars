@@ -1,0 +1,15 @@
+<script src="/js/vstream.js"></script>
+{{> header desktop="true"}}
+
+
+<p>Please insert the Value Stream ID:</p>
+<div>
+    <input class="csrfprot" type="hidden" name="_csrf" value="{{_csrf}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Value Stream ID......" id="input-vstreamID">
+    </div>
+    <button id="searchVstream" type="button" class="btn btn-primary">Search</button>
+</div>
+<div class="resultContainer"></div>
+
+{{> footer}}

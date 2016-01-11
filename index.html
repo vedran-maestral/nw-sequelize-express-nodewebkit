@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My App</title>
+
+</head>
+<body>
+<script type="text/javascript">
+
+    var gui = require('nw.gui');
+    var win = gui.Window.get();
+
+var fs = require("fs");
+
+   /* require('getmac').getMac(function(err,macAddress){
+        //if (err)  throw err
+        alert(macAddress)
+    })*/
+
+fs.readFile("lic.bin", "utf8", function(error, data) {
+
+    if(error) {
+        alert("Missing the license key");
+        gui.App.quit();
+    }
+
+    require('getmac').getMac(function(err,macAddress){
+        if(data !== macAddress) {
+            alert("Your MAC key is not correct");
+        }
+    })
+});
+
+    //win.on('devtools-opened', function () { gui.App.quit();  });
+
+
+
+win.on('close', function() {
+    this.hide(); // Pretend to be closed already
+   alert("closing")
+    this.close(true);
+});
+
+
+//gui.Window.get().showDevTools();
+   //var app = require("gui");
+   gui.App.clearCache();
+   //gui.App.quit();
+
+    setTimeout (function () {
+        window.location = 'http://localhost:9000';
+    },1000)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<script src="/js/material.js"></script>
+{{> header desktop="true"}}
+<div>
+<p>Enter new Material:</p>
+    <input class="csrfprot" type="hidden" name="_csrf" value="{{_csrf}}">
+    <div class="form-group">
+        <div class="col-xs-3">
+        <input type="text" class="form-control" placeholder="New material name" id="input-newMaterialname">
+        </div>
+        <div class="col-xs-3">
+        <input type="text" class="form-control" placeholder="New material description" id="input-newMaterialdescription">
+        </div>
+    </div>
+    <button id="newMaterialbtn" type="button" class="btn btn-primary">New Material</button>
+</div>
+
+<div>
+<p>Search Material Name:</p>
+    <input class="csrfprot" type="hidden" name="_csrf" value="{{_csrf}}">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Material Name..." id="input-vstreamID">
+    </div>
+    <button id="searchVstream" type="button" class="btn btn-primary">Search</button>
+</div>
+<div class="resultContainer"></div>
+{{> footer}}

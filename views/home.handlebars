@@ -1,0 +1,15 @@
+<script src="/js/vstream.js"></script>
+{{> header desktop="true"}}
+
+{{#if Name}}
+    <p>Welcome: {{Name}} {{LastName}}</p>
+{{/if}}
+
+
+<ul class="nav nav-pills" role="tablist">
+    <li role="presentation" class="active"><a href="#">Projects <span class="badge">10</span></a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+</ul>
+
+{{> footer}}

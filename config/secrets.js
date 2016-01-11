@@ -45,16 +45,16 @@ module.exports = {
      }
    },
   mandrill: {
-    user: process.env.MANDRILL_USER || 'hackathonstarterdemo',
-    password: process.env.MANDRILL_PASSWORD || 'E1K950_ydLR4mHw12a0ldA'
+    user: process.env.MANDRILL_USER || '',
+    password: process.env.MANDRILL_PASSWORD || ''
   },
   sendgrid: {
-    user: process.env.SENDGRID_USER || 'hslogin',
-    password: process.env.SENDGRID_PASSWORD || 'hspassword00'
+    user: process.env.SENDGRID_USER || '',
+    password: process.env.SENDGRID_PASSWORD || ''
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || '754220301289665',
-    clientSecret: process.env.FACEBOOK_SECRET || '41860e58c256a3d7ad8267d3c1939a4a',
+    clientID: process.env.FACEBOOK_ID || '',
+    clientSecret: process.env.FACEBOOK_SECRET || '',
     callbackURL: '/auth/facebook/callback',
     passReqToCallback: true
   },

@@ -38,7 +38,7 @@ module.exports = {
      user: '',
      password: '',
      server: '', // You can use 'localhost\\instance' to connect to named instance
-     database: 'cleansheetnode',
+     database: 'yourdatabasahere',
      stream: false, // You can enable streaming globally
      options: {
        encrypt: false // Use this if you're on Windows Azure
